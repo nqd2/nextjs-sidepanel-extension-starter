@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Next.js Side Panel",
+  "version": "0.1.0",
+  "description": "Chrome side panel extension built with Next.js",
+  "permissions": ["sidePanel"],
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "action": {
+    "default_title": "Open side panel"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
