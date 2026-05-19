@@ -28,4 +28,10 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Load in Chrome
 
-Build static export, then load `out/` as an unpacked extension. Set `side_panel.default_path` to your exported `index.html` (e.g. `index.html`).
+```bash
+pnpm build   # exports to out/ and renames _next → next for Chrome
+```
+
+Then `chrome://extensions` → **Load unpacked** → select the `out/` folder.
+
+Chrome rejects extension paths starting with `_` (e.g. Next’s `_next/`). The build script fixes that automatically.
